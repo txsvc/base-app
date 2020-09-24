@@ -52,7 +52,7 @@ docker create --name base-app -e MYSQL_ROOT_PASSWORD=baseapp -e MYSQL_PASSWORD=b
 bundle exec rake db:create db:migrate
 ```
 
-## Reference
+## References
 
 ### Code Quality
 
