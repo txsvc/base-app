@@ -1,0 +1,28 @@
+
+<h2 class="ui teal image header">
+  <%= link_to image_tag('logo.png'), root_path, class: 'image' %>
+  <div class="content">Resend unlock instructions</div>
+</h2>
+
+<%= render "accounts/shared/error_messages", resource: resource %>
+
+<%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { class: 'ui form', method: :post }) do |f| %>
+  
+  <div class='ui segment'>
+
+    <div class='field'>
+      <div class='ui left icon input'>
+        <i class='user icon'></i>
+        <%= f.email_field :email, autofocus: true, autocomplete: 'email', placeholder: 'E-mail address' %>
+      </div>
+    </div>
+
+    <div class="actions">
+      <%= f.submit 'Resend unlock instructions', class: 'ui fluid large teal submit button' %>
+    </div>
+
+  </div>
+
+<% end %>
+
+<%= render "accounts/shared/links" %>

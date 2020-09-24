@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= render 'shared/head' %>
+    <%= javascript_pack_tag 'semantic_ui_helper' %>
+  </head>
+  <body class="account">
+    <div class="ui middle aligned center aligned grid">
+      <div class="column">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

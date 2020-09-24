@@ -1,0 +1,26 @@
+
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  username: <%= ENV["GCP_DB_USER"] || "root" %>
+  password: <%= ENV["GCP_DB_PASSWORD"] || "baseapp" %>
+  pool: <%= ENV["RAILS_MAX_THREADS"] || 5 %>
+  
+development:
+  <<: *default
+  database: baseapp-dev
+  host: '127.0.0.1'
+  port: 33060
+
+test:
+  <<: *default
+  database: baseapp-test
+  host: '127.0.0.1'
+  port: 33060
+
+production:
+  <<: *default
+  database: baseapp
+  #host: '127.0.0.1'
+  #port: 3306
+  socket: <%= ENV["GCP_DB_SOCKET"] %>

@@ -1,0 +1,21 @@
+<div class="ui secondary pointing menu">
+  <%= link_to 'Home', root_path, class: 'item active' %>
+
+  <a class="item">
+    Menu1
+  </a>
+  <a class="item">
+    Menu2
+  </a>
+  
+  <div class="right menu">
+    <% if account_signed_in? %>
+      <%= link_to 'Update my Account', edit_account_registration_path, class: 'ui item' %>
+      <%= link_to 'Logout', destroy_account_session_path, { method: 'delete', class: 'ui item'} %>
+    <% else %>
+      <%= link_to 'Register', new_account_registration_path, data: {turbolinks: false}, class: 'ui item' %>
+      <%= link_to 'Login', account_session_path, class: 'ui item' %>
+    <% end %> 
+  </div>
+  
+</div>

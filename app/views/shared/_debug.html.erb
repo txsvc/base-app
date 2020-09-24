@@ -1,0 +1,7 @@
+<p>
+  <%= session.id %>
+  <% if account_signed_in? %>
+    <%= current_account.display_name %>
+    <%= current_account.role %>
+  <% end %>
+</p>

@@ -1,0 +1,36 @@
+
+<h2 class="ui image header">
+  <%= link_to image_tag('logo.png'), root_path, class: 'image' %>
+  <div class="content">Change your password</div>
+</h2>
+
+<%= render "accounts/shared/error_messages", resource: resource %>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { class: 'ui form', method: :put }) do |f| %>
+  <%= f.hidden_field :reset_password_token %>
+
+  <div class="ui segment">
+  
+    <div class='field'>
+      <div class='ui left icon input'>
+        <i class='lock icon'></i>
+        <%= f.password_field :password, autocomplete: 'new-password', placeholder: 'New password' %>
+      </div>
+    </div>
+
+    <div class='field'>
+      <div class='ui left icon input'>
+        <i class='lock icon'></i>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Confirm new password' %>
+      </div>
+    </div>
+
+    <div class='actions'>
+      <%= f.submit 'Change my password', class: 'ui fluid large submit button' %>
+    </div>
+
+  </div>
+
+<% end %>
+
+<%= render "accounts/shared/links" %>
