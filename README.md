@@ -52,6 +52,12 @@ docker create --name base-app -e MYSQL_ROOT_PASSWORD=baseapp -e MYSQL_PASSWORD=b
 bundle exec rake db:create db:migrate
 ```
 
+### Configuration
+
+```shell
+EDITOR=vim bundle exec rails credentials:edit
+```
+
 ## References
 
 ### Code Quality
@@ -63,6 +69,7 @@ bundle exec rake db:create db:migrate
 * https://cloud.google.com/appengine/docs/standard/ruby/concepts
 * https://cloud.google.com/ruby/rails/using-cloudsql-mysql
 * https://github.com/GoogleCloudPlatform/appengine-ruby
+* https://github.com/GoogleCloudPlatform/ruby-docs-samples
 
 ### Gems
 
