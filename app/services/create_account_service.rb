@@ -1,13 +1,14 @@
-# typed: false
+# typed: true
 # frozen_string_literal: true
 
+# CreateAccountService is used to create accounts in e.g. a rake task
 class CreateAccountService
-  def call(_name, email, password, role = :user)
-    account = Account.find_or_create_by!(email: email) do |a|
+  def create(_name, email, password, role = :user)
+    Account.find_or_create_by!(email: email) do |a|
       a.email = email
       a.password = password
       a.password_confirmation = password
-      # a.name = name
+      a.name = name
       a.role = role
 
       puts "-- Created account '#{email}' with role '#{role}'"

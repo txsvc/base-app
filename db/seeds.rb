@@ -9,10 +9,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+account_service = CreateAccountService.new
+
 # admin
-CreateAccountService.new.call('admin', 'admin@example.com', 'changeme', :admin)
+account_service.create('admin', 'admin@example.com', 'changeme', :admin)
 # user/members
-CreateAccountService.new.call('user1', 'user1@example.com', 'changeme', :member)
-CreateAccountService.new.call('user2', 'user2@example.com', 'changeme')
+account_service.create('user1', 'user1@example.com', 'changeme', :member)
+account_service.create('user2', 'user2@example.com', 'changeme')
 # api
-CreateAccountService.new.call('api1', 'api1@example.com', 'changeme', :api)
+account_service.create('api1', 'api1@example.com', 'changeme', :api)

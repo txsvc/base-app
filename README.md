@@ -62,6 +62,7 @@ EDITOR=vim bundle exec rails credentials:edit
 
 ### Code Quality
 
+* https://rubocop.org
 * https://sorbet.org
 
 ### Google Cloud Platform
@@ -70,6 +71,11 @@ EDITOR=vim bundle exec rails credentials:edit
 * https://cloud.google.com/ruby/rails/using-cloudsql-mysql
 * https://github.com/GoogleCloudPlatform/appengine-ruby
 * https://github.com/GoogleCloudPlatform/ruby-docs-samples
+
+### Ruby & RAILS
+
+* https://www.netguru.com/blog/service-objects-in-rails
+* https://www.toptal.com/ruby-on-rails/rails-service-objects-tutorial
 
 ### Gems
 
