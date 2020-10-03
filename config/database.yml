@@ -10,13 +10,13 @@ development:
   <<: *default
   database: baseapp-dev
   host: '127.0.0.1'
-  port: 33060
+  port: 33061
 
 test:
   <<: *default
   database: baseapp-test
   host: '127.0.0.1'
-  port: 33060
+  port: 33061
 
 production:
   <<: *default

@@ -43,7 +43,7 @@ to our complete [Developer Documentation](/).
 ### Containers
 
 ```shell
-docker create --name base-app -e MYSQL_ROOT_PASSWORD=baseapp -e MYSQL_PASSWORD=baseapp -e MYSQL_USER=baseapp -e MYSQL_DB=baseapp -p 33060:3306 mariadb:10.4
+docker create --name base-app -e MYSQL_ROOT_PASSWORD=baseapp -e MYSQL_PASSWORD=baseapp -e MYSQL_USER=baseapp -e MYSQL_DB=baseapp -p 33061:3306 mariadb:10.4
 ```
 
 ### Create the database
