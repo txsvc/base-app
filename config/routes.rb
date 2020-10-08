@@ -4,7 +4,6 @@
 Rails.application.routes.draw do
   devise_for :accounts
 
-  get 'dashboard', to: 'dashboard#index'
-
+  # the default route
   root 'landing#index'
 end

@@ -1,27 +1,28 @@
+<% content_for :page_title, formatted_title('Resend Confirmation') %>
 
 <h2 class="ui image header">
-  <%= link_to image_tag('logo.png'), root_path, class: 'image' %>
-  <div class="content">Resend confirmation instructions</div>
+    <%= link_to image_tag('logo.png'), root_path, class: 'image' %>
+    <div class="content">Resend confirmation instructions</div>
 </h2>
 
 <%= render "accounts/shared/error_messages", resource: resource %>
 
 <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { class: 'ui form', method: :post }) do |f| %>
 
-  <div class='ui segment'>
+<div class='ui segment'>
 
     <div class='field'>
-      <div class='ui left icon input'>
-        <i class='user icon'></i>
-        <%= f.email_field :email, autofocus: true, autocomplete: 'email', value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), placeholder: 'E-mail address' %>
-      </div>
+        <div class='ui left icon input'>
+            <i class='user icon'></i>
+            <%= f.email_field :email, autofocus: true, autocomplete: 'email', value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), placeholder: 'E-mail address' %>
+        </div>
     </div>
 
     <div class='actions'>
-      <%= f.submit 'Resend confirmation instructions', class: 'ui fluid large submit button' %>
+        <%= f.submit 'Resend confirmation instructions', class: 'ui fluid large submit button' %>
     </div>
 
-  </div>
+</div>
 
 <% end %>
 

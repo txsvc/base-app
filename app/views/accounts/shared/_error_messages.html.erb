@@ -1,13 +1,15 @@
 <% if resource.errors.any? %>
-  <div class='ui error message'>
+
+<div class='ui error message'>
     <i id='dismissable-message' class='close icon'></i>
     <div class='header'>
-    Opps, something went wrong ...
+        Opps, something went wrong ...
     </div>
     <ul class='list'>
-    <% resource.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
+        <% resource.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
     </ul>
-  </div>
+</div>
+
 <% end %>

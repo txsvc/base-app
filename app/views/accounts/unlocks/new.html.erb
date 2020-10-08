@@ -1,5 +1,6 @@
+<% content_for :page_title, formatted_title('Resend Instructions') %>
 
-<h2 class="ui teal image header">
+<h2 class="ui image header">
   <%= link_to image_tag('logo.png'), root_path, class: 'image' %>
   <div class="content">Resend unlock instructions</div>
 </h2>
@@ -18,7 +19,7 @@
     </div>
 
     <div class="actions">
-      <%= f.submit 'Resend unlock instructions', class: 'ui fluid large teal submit button' %>
+      <%= f.submit 'Resend unlock instructions', class: 'ui fluid large submit button' %>
     </div>
 
   </div>

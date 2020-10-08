@@ -1,3 +1,8 @@
+// the UI framework
+@import "semantic-ui";
+// All of our custom styles are here. View specific styles can be in their own *.scss though.
+@import "custom";
+
 .account {
   background-color: #cccccc;
 }
