@@ -13,7 +13,6 @@ class Account < ApplicationRecord
   enum role: { user: 0, member: 1, subscriber: 2, staff: 3, admin: 4, god: 5, app: 10, api: 20 }
 
   after_initialize :set_defaults, unless: :persisted?
-  after_validation :set_default_name, on: [:update]
 
   devise :database_authenticatable, :registerable, :trackable,
          :recoverable, :rememberable, :validatable, :confirmable, :lockable
@@ -36,6 +35,10 @@ class Account < ApplicationRecord
 
   def display_name
     name
+  end
+
+  def unique_id
+    email
   end
 
   private
