@@ -43,7 +43,7 @@ to our complete [Developer Documentation](/).
 ### Containers
 
 ```shell
-docker create --name base-app -e MYSQL_ROOT_PASSWORD=baseapp -e MYSQL_PASSWORD=baseapp -e MYSQL_USER=baseapp -e MYSQL_DB=baseapp -p 33061:3306 mariadb:10.4
+docker create --name base-app -e MYSQL_ROOT_PASSWORD=baseapp -e MYSQL_PASSWORD=baseapp -e MYSQL_USER=baseapp -e MYSQL_DB=baseapp -p 33062:3306 mariadb:10.4
 ```
 
 ### Create the database
@@ -76,9 +76,11 @@ EDITOR=vim bundle exec rails credentials:edit
 
 * https://www.netguru.com/blog/service-objects-in-rails
 * https://www.toptal.com/ruby-on-rails/rails-service-objects-tutorial
+* https://guides.rubyonrails.org/v3.2.5/layouts_and_rendering.html
 
 ### Gems
 
 * https://github.com/doabit/semantic-ui-sass
 * https://github.com/thoughtbot/high_voltage
 * https://github.com/Shopify/rubocop-sorbet
+* https://github.com/rspec/rspec-rails
