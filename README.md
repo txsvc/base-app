@@ -58,6 +58,20 @@ bundle exec rake db:create db:migrate
 EDITOR=vim bundle exec rails credentials:edit
 ```
 
+### Deployment
+
+```shell
+PROJECT_ID=<project_id> bundle exec rake gcloud:deploy
+```
+
+To get a list of PROJECT_IDs use
+
+```shell
+gcloud projects list
+```
+
+If `PROJECT_ID` is not specified, the default project will be the deployment target.
+
 ## References
 
 ### Code Quality
