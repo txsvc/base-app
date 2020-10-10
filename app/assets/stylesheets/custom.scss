@@ -1,6 +1,20 @@
 // the custom color palette
-$default_bkg_color: #feefde;
-$accounts_bkg_color: #feefde;
-$accounts_links_bkg_color: #d7b4a5;
-$accounts_green: #64cd62;
-$accounts_red: #b34044;
+$default_bkg: #faf9fd;
+$default_bkg_dark: #f4f3fa;
+
+$default_red: #ff5367;
+$default_rose: #ffddb7;
+$default_orange: #ffa001;
+$default_grey: #b6a7a7;
+$default_dark: #43272f;
+
+$default_extra_bkg: #fff0dd;
+$default_extra_bkg_dark: #80475b;
+
+// basics
+$white: #ffffff;
+
+// field_with_errors styling
+.ui.form .field .ui.input .error {
+  border: 1px solid $default_red;
+}

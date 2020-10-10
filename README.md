@@ -48,8 +48,16 @@ docker create --name base-app -e MYSQL_ROOT_PASSWORD=baseapp -e MYSQL_PASSWORD=b
 
 ### Create the database
 
+Local:
+
 ```shell
 bundle exec rake db:create db:migrate
+```
+
+On Google Cloud Platform:
+
+```shell
+bundle exec rake appengine:exec -- bundle exec rake db:create db:migrate
 ```
 
 ### Configuration
@@ -72,6 +80,12 @@ gcloud projects list
 
 If `PROJECT_ID` is not specified, the default project will be the deployment target.
 
+### Migration
+
+```shell
+bundle exec rake appengine:exec -- bundle exec rake db:migrate
+```
+
 ## References
 
 ### Code Quality
@@ -91,6 +105,11 @@ If `PROJECT_ID` is not specified, the default project will be the deployment tar
 * https://www.netguru.com/blog/service-objects-in-rails
 * https://www.toptal.com/ruby-on-rails/rails-service-objects-tutorial
 * https://guides.rubyonrails.org/v3.2.5/layouts_and_rendering.html
+
+### UIX
+
+* https://semantic-ui.com/
+* https://github.com/Semantic-Org/Semantic-UI
 
 ### Gems
 

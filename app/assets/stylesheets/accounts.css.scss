@@ -3,8 +3,16 @@
 // All of our custom styles are here. View specific styles can be in their own *.scss though.
 @import "custom";
 
+html,
+body {
+  background-color: $default_bkg;
+}
+
 .account {
-  background-color: #cccccc;
+  margin-top: 5%;
+}
+.account .ui.message {
+  background-color: $default_bkg_dark;
 }
 .account .column {
   max-width: 500px;
@@ -14,4 +22,15 @@
 }
 .account .ui.error.message .header {
   display: flex;
+}
+.account .ui.header {
+  color: $default_orange;
+}
+.account .ui.fluid.button {
+  background: $default_orange;
+  color: $white;
+}
+.account .ui.fluid.danger.button {
+  background: $default_red;
+  color: $white;
 }

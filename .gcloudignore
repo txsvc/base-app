@@ -4,6 +4,8 @@ app.yaml
 .git
 .gitignore
 docs/
+sorbet/
+spec/
 # ruby stuff
 .ruby-gemset
 .ruby-version

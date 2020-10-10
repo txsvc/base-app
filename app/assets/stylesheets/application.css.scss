@@ -2,3 +2,8 @@
 @import "semantic-ui";
 // All of our custom styles are here. View specific styles can be in their own *.scss though.
 @import "custom";
+
+html,
+body {
+  background-color: $default_bkg;
+}
