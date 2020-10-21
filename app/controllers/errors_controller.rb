@@ -4,7 +4,7 @@ class ErrorsController < ActionController::Base
 	include Error::ErrorHandler
 
 	def page_not_found
-		json_error_responder(:page_not_found, 404, 'not found')
+		respond_to_error(:page_not_found, 404, 'not found')
 	end
 
 end
