@@ -1,28 +1,28 @@
+# typed: false
 namespace :gcloud do
-	desc "Tasks supporting Google Cloud Platform deployments"
-  
-	task :test do
-		puts ENV['PROJECT_ID']
-	end
+  desc 'Tasks supporting Google Cloud Platform deployments'
 
-	task :deploy do
-		puts "Clear temp files"
-		%x( rm -rf public/assets )
-		%x( mkdir -p public/assets )
+  task :test do
+    puts ENV['PROJECT_ID']
+  end
 
-		puts "Build assets"
-		%x( RAILS_ENV=production bundle exec rake assets:precompile )
+  task :deploy do
+    puts 'Clear temp files'
+    `rm -rf public/assets`
+    `mkdir -p public/assets`
 
-		puts "Deploy to Google AppEngine"
-		opts = ""
-		project_id = ENV['PROJECT_ID']
-		opts = "--project=#{project_id}" if project_id != nil
-		cmd = "gcloud app deploy app.yaml -q #{opts}"
-		puts "\nExecuting '#{cmd}'"
-		ok = system( cmd )
+    puts 'Build assets'
+    `RAILS_ENV=production bundle exec rake assets:precompile`
 
-		# reset the environment
-		%x( yarn install --check-files )
+    puts 'Deploy to Google AppEngine'
+    opts = ''
+    project_id = ENV['PROJECT_ID']
+    opts = "--project=#{project_id}" unless project_id.nil?
+    cmd = "gcloud app deploy app.yaml -q #{opts}"
+    puts "\nExecuting '#{cmd}'"
+    ok = system(cmd)
 
-	end
+    # reset the environment
+    `yarn install --check-files`
+  end
 end
