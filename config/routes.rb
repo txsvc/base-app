@@ -12,6 +12,6 @@ Rails.application.routes.draw do
   get 'pages/privacy' => 'high_voltage/pages#show', id: 'privacy'
 
   # catch all
-  match '*unmatched', to: 'errors#not_found', via: :all
+  match '*unmatched', to: 'errors#page_not_found', via: :all
 
 end

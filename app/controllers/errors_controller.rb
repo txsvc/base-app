@@ -1,13 +1,10 @@
 
 class ErrorsController < ActionController::Base
-	
-	def not_found
-		# FIXME: log this in production ...
-		redirect_to '/'
+	protect_from_forgery with: :null_session
+	include Error::ErrorHandler
+
+	def page_not_found
+		json_error_responder(:page_not_found, 404, 'not found')
 	end
-  
-	def internal_server_error
-		# FIXME: log this in production ...
-		redirect_to '/'
-	end
-  end
+
+end
