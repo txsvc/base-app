@@ -2,9 +2,10 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
-  include Pundit
   protect_from_forgery with: :null_session
 
+  include Pundit
+  
   # enforce parameters
   ActionController::Parameters.action_on_unpermitted_parameters = :raise
 

@@ -105,11 +105,14 @@ bundle exec rake appengine:exec -- bundle exec rake db:migrate
 * https://www.netguru.com/blog/service-objects-in-rails
 * https://www.toptal.com/ruby-on-rails/rails-service-objects-tutorial
 * https://guides.rubyonrails.org/v3.2.5/layouts_and_rendering.html
+* https://medium.com/rails-ember-beyond/error-handling-in-rails-the-modular-way-9afcddd2fe1b
 
 ### UIX
 
 * https://semantic-ui.com/
 * https://github.com/Semantic-Org/Semantic-UI
+* https://favicon.io/favicon-converter/
+* https://simpleicons.org/
 
 ### Gems
 
